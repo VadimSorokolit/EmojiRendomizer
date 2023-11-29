@@ -24,10 +24,20 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.changeEmojiButton.layer.cornerRadius = self.changeEmojiButton.frame.height / 2
+        self.setupButtons()
+        self.setupLabels()
     }
     
     // Mark - Methods
+    
+    private func setupButtons() {
+        self.changeEmojiButton.layer.cornerRadius = self.changeEmojiButton.frame.height / 2
+    }
+    
+    private func setupLabels() {
+        self.emojiLabel.text = nil
+        self.emojiLabel.backgroundColor = UIColor.clear
+    }
     
     private func generateNewEmoji() -> String? {
         return self.emojies.randomElement()?.description
