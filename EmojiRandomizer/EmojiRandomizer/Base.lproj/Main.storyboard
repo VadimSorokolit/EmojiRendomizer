@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZv-Np-Kr5">
-                                <rect key="frame" x="115.33333333333333" y="421" width="162.33333333333337" height="35"/>
+                                <rect key="frame" x="118.66666666666669" y="421" width="156" height="35"/>
                                 <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Srw-0Z-V8H"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="ahM-Dg-mwR"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Change Emogi 🫵"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change Emoji 🫵"/>
                                 <connections>
                                     <action selector="changeEmojiButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5pd-tS-cL7"/>
                                 </connections>
@@ -36,19 +36,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changes counter:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1e-OS-LBu">
+                                <rect key="frame" x="28" y="71" width="135" height="21"/>
+                                <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.43921568989999998" green="0.68235301969999995" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="j1e-OS-LBu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="7gV-PN-eqm"/>
                             <constraint firstItem="RYq-x7-U6o" firstAttribute="top" secondItem="BZv-Np-Kr5" secondAttribute="bottom" constant="53" id="KYf-s3-pgI"/>
                             <constraint firstItem="BZv-Np-Kr5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LML-ly-2zH"/>
                             <constraint firstItem="RYq-x7-U6o" firstAttribute="centerX" secondItem="BZv-Np-Kr5" secondAttribute="centerX" id="Ng6-JE-E1r"/>
+                            <constraint firstItem="j1e-OS-LBu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="oZt-NB-Cwt"/>
                             <constraint firstItem="BZv-Np-Kr5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="pYq-mg-zWl"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="changeEmojiButton" destination="BZv-Np-Kr5" id="oiG-kJ-a8g"/>
                         <outlet property="emojiLabel" destination="RYq-x7-U6o" id="CZP-Fh-Iml"/>
+                        <outlet property="textChangeCounterLabel" destination="j1e-OS-LBu" id="oEW-ar-e5g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

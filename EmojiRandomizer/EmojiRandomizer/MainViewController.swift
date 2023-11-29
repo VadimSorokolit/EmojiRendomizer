@@ -11,12 +11,13 @@ class MainViewController: UIViewController {
     
     // Mark: - IBOutlets
     
-    private var counterOfPressButton = 0
     @IBOutlet weak private var changeEmojiButton: UIButton!
     @IBOutlet weak private var emojiLabel: UILabel!
+    @IBOutlet weak var textChangeCounterLabel: UILabel!
     
     // Mark: - Properties
     
+    private var counterOfPressButton = 0
     private let emojies = "🦧🦓🏀🎲🚖📱🎄🦜🐿️🌍"
     
     // Mark: - Lifecycle
@@ -37,6 +38,7 @@ class MainViewController: UIViewController {
     private func setupLabels() {
         self.emojiLabel.text = nil
         self.emojiLabel.backgroundColor = UIColor.clear
+        self.textChangeCounterLabel.backgroundColor = nil
     }
     
     private func generateNewEmoji() -> String? {
