@@ -12,12 +12,14 @@ class MainViewController: UIViewController {
     // Mark: - IBOutlets
     
     @IBOutlet weak private var changeEmojiButton: UIButton!
+    @IBOutlet weak private var resetValueOfChangeCounter: UIButton!
     @IBOutlet weak private var emojiLabel: UILabel!
-    @IBOutlet weak var textChangeCounterLabel: UILabel!
+    @IBOutlet weak private var textChangeCounterLabel: UILabel!
+    @IBOutlet weak private var valueOfEmojiChangeCounter: UILabel!
     
-    // Mark: - Properties
+    // MARK: - Properties
     
-    private var counterOfPressButton = 0
+    private var emojiChangesCounter = 0
     private let emojies = "🦧🦓🏀🎲🚖📱🎄🦜🐿️🌍"
     
     // Mark: - Lifecycle
@@ -29,7 +31,7 @@ class MainViewController: UIViewController {
         self.setupLabels()
     }
     
-    // Mark - Methods
+    // MARK: - Methods
     
     private func setupButtons() {
         self.changeEmojiButton.layer.cornerRadius = self.changeEmojiButton.frame.height / 2
@@ -39,20 +41,28 @@ class MainViewController: UIViewController {
         self.emojiLabel.text = nil
         self.emojiLabel.backgroundColor = UIColor.clear
         self.textChangeCounterLabel.backgroundColor = nil
+        self.valueOfEmojiChangeCounter.backgroundColor = .clear
+        self.resetValueOfChangeCounter.backgroundColor = nil
     }
     
-    private func generateNewEmoji() -> String? {
-        return self.emojies.randomElement()?.description
+    private func generateNewEmoji() {
+        let emoji = self.emojies.randomElement()?.description
+        self.emojiLabel.text = emoji
     }
     
-    
-    // Mark: IBActions
+    // MARK: IBActions
     
     @IBAction private func changeEmojiButtonTap(_ sender: UIButton) {
-        self.emojiLabel.text = self.generateNewEmoji()
-        counterOfPressButton += 1
-        print(counterOfPressButton)
+        self.generateNewEmoji()
+        self.emojiChangesCounter += 1
+        self.valueOfEmojiChangeCounter.text = String(self.emojiChangesCounter)
     }
     
+    @IBAction private func resetValueOfChangeEmojiTap(_ sender: UIButton) {
+        if self.emojiChangesCounter > 0 {
+            self.valueOfEmojiChangeCounter.text = String(0)
+            self.emojiChangesCounter = 0
+        }
+    }
 }
 

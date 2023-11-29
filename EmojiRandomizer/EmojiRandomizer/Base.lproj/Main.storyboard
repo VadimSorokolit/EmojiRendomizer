@@ -43,22 +43,54 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-qz-RfF">
+                                <rect key="frame" x="171" y="71" width="22" height="21"/>
+                                <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eBm-YQ-5zu"/>
+                                    <constraint firstAttribute="width" constant="22" id="fQ1-zH-aNX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ou-VR-Njs">
+                                <rect key="frame" x="207" y="75" width="20" height="12"/>
+                                <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="Akn-fT-voo"/>
+                                    <constraint firstAttribute="width" constant="20" id="LLe-PC-asy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system" title="">
+                                    <color key="baseForegroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetValueOfChangeEmojiTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vKK-Ty-3lL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.43921568989999998" green="0.68235301969999995" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="j1e-OS-LBu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="7gV-PN-eqm"/>
+                            <constraint firstItem="kUD-qz-RfF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="DJe-VC-iUP"/>
                             <constraint firstItem="RYq-x7-U6o" firstAttribute="top" secondItem="BZv-Np-Kr5" secondAttribute="bottom" constant="53" id="KYf-s3-pgI"/>
                             <constraint firstItem="BZv-Np-Kr5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LML-ly-2zH"/>
                             <constraint firstItem="RYq-x7-U6o" firstAttribute="centerX" secondItem="BZv-Np-Kr5" secondAttribute="centerX" id="Ng6-JE-E1r"/>
+                            <constraint firstItem="5Ou-VR-Njs" firstAttribute="leading" secondItem="kUD-qz-RfF" secondAttribute="trailing" constant="14" id="ceY-4y-CPA"/>
                             <constraint firstItem="j1e-OS-LBu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="oZt-NB-Cwt"/>
                             <constraint firstItem="BZv-Np-Kr5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="pYq-mg-zWl"/>
+                            <constraint firstItem="kUD-qz-RfF" firstAttribute="leading" secondItem="j1e-OS-LBu" secondAttribute="trailing" constant="8" symbolic="YES" id="vas-6k-ZdQ"/>
+                            <constraint firstItem="5Ou-VR-Njs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="vbl-cb-re2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="changeEmojiButton" destination="BZv-Np-Kr5" id="oiG-kJ-a8g"/>
                         <outlet property="emojiLabel" destination="RYq-x7-U6o" id="CZP-Fh-Iml"/>
+                        <outlet property="resetValueOfChangeCounter" destination="5Ou-VR-Njs" id="gCc-qy-Cgk"/>
                         <outlet property="textChangeCounterLabel" destination="j1e-OS-LBu" id="oEW-ar-e5g"/>
+                        <outlet property="valueOfEmojiChangeCounter" destination="kUD-qz-RfF" id="EQF-Lj-xns"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -66,4 +98,7 @@
             <point key="canvasLocation" x="98.473282442748086" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="trash" catalog="system" width="117" height="128"/>
+    </resources>
 </document>
