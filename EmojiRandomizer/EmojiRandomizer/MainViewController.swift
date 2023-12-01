@@ -9,24 +9,24 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    // Mark: - IBOutlets
+    // MARK: - IBOutlets
     
-    @IBOutlet weak private var changeEmojiButton: UIButton!
-    @IBOutlet weak private var resetValueOfChangeCounter: UIButton!
-    @IBOutlet weak private var emojiLabel: UILabel!
-    @IBOutlet weak private var textChangeCounterLabel: UILabel!
-    @IBOutlet weak private var valueOfEmojiChangeCounter: UILabel!
+      @IBOutlet weak private var changeEmojiButton: UIButton!
+      @IBOutlet weak private var resetChangesCounterButton: UIButton!
+      @IBOutlet weak private var emojiLabel: UILabel!
+      @IBOutlet weak private var counterTitleLabel: UILabel!
+      @IBOutlet weak private var counterLabel: UILabel!
     
     // MARK: - Properties
-    
+  
     private var emojiChangesCounter = 0
     private let emojies = "🦧🦓🏀🎲🚖📱🎄🦜🐿️🌍"
     
-    // Mark: - Lifecycle
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.updateResetButton()
         self.setupButtons()
         self.setupLabels()
     }
@@ -34,15 +34,16 @@ class MainViewController: UIViewController {
     // MARK: - Methods
     
     private func setupButtons() {
-        self.changeEmojiButton.layer.cornerRadius = self.changeEmojiButton.frame.height / 2
+        let halfOfButtonHeight = self.changeEmojiButton.frame.height / 2
+        self.changeEmojiButton.layer.cornerRadius = halfOfButtonHeight
     }
     
     private func setupLabels() {
         self.emojiLabel.text = nil
         self.emojiLabel.backgroundColor = UIColor.clear
-        self.textChangeCounterLabel.backgroundColor = nil
-        self.valueOfEmojiChangeCounter.backgroundColor = .clear
-        self.resetValueOfChangeCounter.backgroundColor = nil
+        self.counterTitleLabel.backgroundColor = nil
+        self.counterLabel.backgroundColor = .clear
+        self.resetChangesCounterButton.backgroundColor = nil
     }
     
     private func generateNewEmoji() {
@@ -50,19 +51,38 @@ class MainViewController: UIViewController {
         self.emojiLabel.text = emoji
     }
     
-    // MARK: IBActions
+    // API for counter
+    
+    private func increaseCounter() {
+        self.emojiChangesCounter += 1
+        self.counterLabel.text = String(self.emojiChangesCounter)
+        self.updateResetButton()
+    }
+    
+    private func resetCounter() {
+        self.emojiChangesCounter = 0
+        self.counterLabel.text = String(self.emojiChangesCounter)
+        self.updateResetButton()
+    }
+    
+    // API for resetChangesCounterButton
+    
+    private func updateResetButton() {
+        self.resetChangesCounterButton.isHidden = self.emojiChangesCounter == 0
+    }
+    
+    // MARK: - IBActions
     
     @IBAction private func changeEmojiButtonTap(_ sender: UIButton) {
         self.generateNewEmoji()
-        self.emojiChangesCounter += 1
-        self.valueOfEmojiChangeCounter.text = String(self.emojiChangesCounter)
+        self.increaseCounter()
     }
-    
-    @IBAction private func resetValueOfChangeEmojiTap(_ sender: UIButton) {
-        if self.emojiChangesCounter > 0 {
-            self.valueOfEmojiChangeCounter.text = String(0)
-            self.emojiChangesCounter = 0
-        }
+   
+    @IBAction private func resetChangesCounterButtonTap(_ sender: UIButton) {
+            self.resetCounter()
     }
 }
+
+
+
 

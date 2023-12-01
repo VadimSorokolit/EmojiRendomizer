@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +27,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Change Emoji 🫵"/>
                                 <connections>
-                                    <action selector="changeEmojiButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5pd-tS-cL7"/>
+                                    <action selector="changeEmojiButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A60-wZ-cLc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-x7-U6o">
@@ -54,19 +55,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ou-VR-Njs">
-                                <rect key="frame" x="207" y="75" width="20" height="12"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ou-VR-Njs">
+                                <rect key="frame" x="207" y="70" width="26" height="24"/>
                                 <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="Akn-fT-voo"/>
                                     <constraint firstAttribute="width" constant="20" id="LLe-PC-asy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system" title="">
-                                    <color key="baseForegroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <imageReference key="image" image="trash" catalog="system" symbolScale="medium"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="resetValueOfChangeEmojiTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vKK-Ty-3lL"/>
+                                    <action selector="resetChangesCounterButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7p6-03-vk8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -86,11 +88,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="changeEmojiButton" destination="BZv-Np-Kr5" id="oiG-kJ-a8g"/>
-                        <outlet property="emojiLabel" destination="RYq-x7-U6o" id="CZP-Fh-Iml"/>
-                        <outlet property="resetValueOfChangeCounter" destination="5Ou-VR-Njs" id="gCc-qy-Cgk"/>
-                        <outlet property="textChangeCounterLabel" destination="j1e-OS-LBu" id="oEW-ar-e5g"/>
-                        <outlet property="valueOfEmojiChangeCounter" destination="kUD-qz-RfF" id="EQF-Lj-xns"/>
+                        <outlet property="changeEmojiButton" destination="BZv-Np-Kr5" id="aJa-dU-obn"/>
+                        <outlet property="counterLabel" destination="kUD-qz-RfF" id="dDj-Ur-elw"/>
+                        <outlet property="counterTitleLabel" destination="j1e-OS-LBu" id="44B-W4-bDf"/>
+                        <outlet property="emojiLabel" destination="RYq-x7-U6o" id="rbu-PJ-HQ5"/>
+                        <outlet property="resetChangesCounterButton" destination="5Ou-VR-Njs" id="aNk-i3-L9t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
