@@ -36,6 +36,8 @@ class MainViewController: UIViewController {
     private func setupButtons() {
         let halfOfButtonHeight = self.changeEmojiButton.frame.height / 2
         self.changeEmojiButton.layer.cornerRadius = halfOfButtonHeight
+        self.changeEmojiButton.titleLabel?.textAlignment = .center
+
     }
     
     private func setupLabels() {
