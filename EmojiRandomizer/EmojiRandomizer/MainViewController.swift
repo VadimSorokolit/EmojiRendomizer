@@ -11,11 +11,11 @@ class MainViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-      @IBOutlet weak private var changeEmojiButton: UIButton!
-      @IBOutlet weak private var resetChangesCounterButton: UIButton!
-      @IBOutlet weak private var emojiLabel: UILabel!
-      @IBOutlet weak private var counterTitleLabel: UILabel!
-      @IBOutlet weak private var counterLabel: UILabel!
+    @IBOutlet weak private var changeEmojiButton: UIButton!
+    @IBOutlet weak private var resetChangesCounterButton: UIButton!
+    @IBOutlet weak private var emojiLabel: UILabel!
+    @IBOutlet weak private var counterTitleLabel: UILabel!
+    @IBOutlet weak private var counterLabel: UILabel!
     
     // MARK: - Properties
   
@@ -26,8 +26,9 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.updateResetButton()
+        
         self.setupButtons()
+        self.updateResetButton()
         self.setupLabels()
     }
     
@@ -68,7 +69,7 @@ class MainViewController: UIViewController {
     // API for resetChangesCounterButton
     
     private func updateResetButton() {
-        self.resetChangesCounterButton.isHidden = self.emojiChangesCounter == 0
+        self.resetChangesCounterButton.isHidden = self.emojiChangesCounter.isZero
     }
     
     // MARK: - IBActions
@@ -79,7 +80,7 @@ class MainViewController: UIViewController {
     }
    
     @IBAction private func resetChangesCounterButtonTap(_ sender: UIButton) {
-            self.resetCounter()
+        self.resetCounter()
     }
 }
 
