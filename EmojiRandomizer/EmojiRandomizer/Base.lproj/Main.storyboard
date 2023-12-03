@@ -17,20 +17,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZv-Np-Kr5">
-                                <rect key="frame" x="118.66666666666669" y="421" width="156" height="35"/>
+                                <rect key="frame" x="96.666666666666686" y="418.66666666666669" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Srw-0Z-V8H"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="ahM-Dg-mwR"/>
+                                    <constraint firstAttribute="height" constant="40" id="Srw-0Z-V8H"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="ahM-Dg-mwR"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Change Emoji 🫵"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change Emoji 🫵">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleFootnote"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="changeEmojiButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A60-wZ-cLc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-x7-U6o">
-                                <rect key="frame" x="135.66666666666666" y="509" width="121.99999999999997" height="122"/>
+                                <rect key="frame" x="135.66666666666666" y="511.66666666666674" width="121.99999999999997" height="122"/>
                                 <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="122" id="hSb-Qc-rYW"/>
@@ -59,11 +62,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ou-VR-Njs">
-                                <rect key="frame" x="332" y="71" width="26" height="24"/>
+                                <rect key="frame" x="332" y="71" width="26" height="21"/>
                                 <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="B6B-1p-3SW"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="">
-                                    <backgroundConfiguration key="background" image="trash.fill" catalog="system"/>
+                                    <backgroundConfiguration key="background" image="trash.fill" catalog="system" imageContentMode="scaleAspectFit"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -76,9 +83,8 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Ou-VR-Njs" secondAttribute="trailing" constant="35" id="1UY-d4-seJ"/>
                             <constraint firstItem="j1e-OS-LBu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="7gV-PN-eqm"/>
-                            <constraint firstItem="5Ou-VR-Njs" firstAttribute="top" secondItem="kUD-qz-RfF" secondAttribute="top" id="Bh8-84-l0B"/>
+                            <constraint firstItem="5Ou-VR-Njs" firstAttribute="centerY" secondItem="kUD-qz-RfF" secondAttribute="centerY" id="DgL-x9-Rru"/>
                             <constraint firstItem="RYq-x7-U6o" firstAttribute="top" secondItem="BZv-Np-Kr5" secondAttribute="bottom" constant="53" id="KYf-s3-pgI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Ou-VR-Njs" secondAttribute="bottom" constant="723" id="Kft-w7-rCm"/>
                             <constraint firstItem="BZv-Np-Kr5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LML-ly-2zH"/>
                             <constraint firstItem="RYq-x7-U6o" firstAttribute="centerX" secondItem="BZv-Np-Kr5" secondAttribute="centerX" id="Ng6-JE-E1r"/>
                             <constraint firstItem="5Ou-VR-Njs" firstAttribute="leading" secondItem="kUD-qz-RfF" secondAttribute="trailing" constant="15" id="RKY-Xo-Df0"/>

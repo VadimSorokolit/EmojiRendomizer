@@ -36,8 +36,7 @@ class MainViewController: UIViewController {
     private func setupButtons() {
         let halfOfButtonHeight = self.changeEmojiButton.frame.height / 2
         self.changeEmojiButton.layer.cornerRadius = halfOfButtonHeight
-        self.changeEmojiButton.titleLabel?.textAlignment = .center
-
+        self.resetChangesCounterButton.backgroundColor = nil
     }
     
     private func setupLabels() {
@@ -45,7 +44,6 @@ class MainViewController: UIViewController {
         self.emojiLabel.backgroundColor = UIColor.clear
         self.counterTitleLabel.backgroundColor = nil
         self.counterLabel.backgroundColor = .clear
-        self.resetChangesCounterButton.backgroundColor = nil
     }
     
     private func generateNewEmoji() {
