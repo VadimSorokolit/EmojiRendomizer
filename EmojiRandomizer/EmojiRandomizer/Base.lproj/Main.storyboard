@@ -43,20 +43,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changes counter:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1e-OS-LBu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Changes counter:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1e-OS-LBu">
                                 <rect key="frame" x="28" y="71" width="135" height="21"/>
                                 <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-qz-RfF">
-                                <rect key="frame" x="171" y="71" width="146" height="21"/>
-                                <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="eBm-YQ-5zu"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="146" id="luw-2a-84I"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -77,6 +66,17 @@
                                     <action selector="resetChangesCounterButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7p6-03-vk8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUD-qz-RfF">
+                                <rect key="frame" x="171" y="71" width="146" height="21"/>
+                                <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eBm-YQ-5zu"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="146" id="luw-2a-84I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.43921568989999998" green="0.68235301969999995" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -91,6 +91,7 @@
                             <constraint firstItem="kUD-qz-RfF" firstAttribute="centerY" secondItem="j1e-OS-LBu" secondAttribute="centerY" id="g2A-g7-Shb"/>
                             <constraint firstItem="j1e-OS-LBu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="oZt-NB-Cwt"/>
                             <constraint firstItem="BZv-Np-Kr5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="pYq-mg-zWl"/>
+                            <constraint firstItem="kUD-qz-RfF" firstAttribute="width" secondItem="j1e-OS-LBu" secondAttribute="width" multiplier="1.08148" id="u9l-w2-jnO"/>
                             <constraint firstItem="kUD-qz-RfF" firstAttribute="leading" secondItem="j1e-OS-LBu" secondAttribute="trailing" constant="8" symbolic="YES" id="vas-6k-ZdQ"/>
                         </constraints>
                     </view>

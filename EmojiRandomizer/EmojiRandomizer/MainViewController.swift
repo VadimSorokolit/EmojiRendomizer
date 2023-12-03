@@ -2,7 +2,7 @@
 //  MainViewController.swift
 //  EmojiRandomizer
 //
-//  Created by Vadim  on 28.11.2023.
+//  Created by Vadim on 28.11.2023.
 //
 
 import UIKit

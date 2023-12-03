@@ -8,7 +8,9 @@
 import Foundation
 
 extension Int {
+    
     var isZero: Bool {
         self == 0
+        
     }
 }
