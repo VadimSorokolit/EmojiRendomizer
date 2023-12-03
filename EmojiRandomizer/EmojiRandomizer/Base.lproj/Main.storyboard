@@ -71,7 +71,6 @@
                                 <color key="backgroundColor" red="0.91372549530000002" green="0.90980386729999996" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="eBm-YQ-5zu"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="146" id="luw-2a-84I"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
