@@ -1,6 +1,6 @@
 # EmojiRendomizer
 First UI test project for learning layout
 
-<img src="./images/blob/main/EmojiRandomizer.png">
+<img src="https://github.com/VadimSorokolit/images/blob/main/EmojiRandomizer.png" width = 600 height = 300>
 
 
